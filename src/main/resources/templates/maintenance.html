@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <title>AUTOREKISTERI</title>
+    <link rel="stylesheet" th:href="@{/css/reset.css}" />
+    <link rel="stylesheet" th:href="@{/css/maintenance.css}" />
+</head>
+<body>
+    <h1>Luo uusi</h1>
+    <form th:action="@{/maintenance}" method="POST">
+        <span>Omistajan etunimi: </span>
+        <input type="text" name="etunimi"/><br>
+        <span>Omistajan sukunimi: </span>
+        <input type="text" name="sukunimi"/><br>
+        <span>Auton valmistusnumero: </span>
+        <input type="text" name="valmistenumero"/><br>
+        <span>Auton rekisterinumero: </span>
+        <input type="text" name="rekisterinumero"/><br>
+        <span>Auton merkki: </span>
+        <input type="text" name="merkki"/><br>
+        <span>Auton malli: </span>
+        <input type="text" name="malli"/><br>
+        <span>Auton valmistusvuosi: </span>
+        <input type="text" name="valmistusvuosi"/><br>
+
+        <input type="submit" value="Submit" id="submit"/>
+    </form>
+
+    <button>
+        <a href="index.html" th:href="@{/}">Palaa kotisivulle</a>
+    </button>
+</body>
+</html>
